@@ -1,0 +1,14 @@
+#!/bin/bash
+
+if [[ -n $RESRC_BASE_VERSION ]]
+then
+    RESRC_BASE_CONFIGURATION+=(RESRC_BASE_README)
+
+    RESRC_BASE_ORG="resrc"
+    RESRC_BASE_README="<!-- TODO Documenter le projet ! -->"
+
+    RESRC_BASE_copier "LICENCE.md" 
+    RESRC_BASE_copier "README.md"
+
+    RESRC_BASE_configurer "README.md"
+fi
