@@ -3,9 +3,14 @@
 if [[ -n $RESRC_BASE_VERSION ]]
 then
     RESRC_BASE_CONFIGURATION+=(RESRC_BASE_README)
+    RESRC_BASE_CONFIGURATION+=(RESRC_BASE_ORG_GITHUB)
 
-    RESRC_BASE_ORG="resrc"
-    RESRC_BASE_README="<!-- TODO Documenter le projet ! -->"
+    if [ -z "${RESRC_BASE_ORG}" ]
+    then RESRC_BASE_ORG="resrc"; fi
+    if [ -z "${RESRC_BASE_README}" ]
+    then RESRC_BASE_README="<!-- TODO Documenter le projet ! -->"; fi
+    if [ -z "${RESRC_BASE_ORG_GITHUB}" ]
+    then RESRC_BASE_ORG_GITHUB="ressource-club"; fi
 
     RESRC_BASE_copier "LICENCE.md" 
     RESRC_BASE_copier "README.md"
