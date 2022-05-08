@@ -15,5 +15,5 @@ then
     RESRC_BASE_copier "LICENCE.md" 
     RESRC_BASE_copier "README.md"
 
-    RESRC_BASE_configurer "README.md"
+    RESRC_BASE_configurer "README.md" 2
 fi
